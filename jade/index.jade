@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+
+    meta(content='IE=edge', 'http-equiv'='X-UA-Compatible')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+
+    meta(name='keywords', content=pageKeywords)
+    meta(name='description', content=pageDescription)
+
+    meta(property='og:url', content='http://madebyllama.com/')
+    meta(property='og:title', content=facebookTitle)
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content=facebookSiteName)
+    meta(property='og:description', content=facebookDescription)
+    meta(property='og:image', content='http://madebyllama.com/img/social/facebook.jpg')
+
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content=twitterUsername)
+    meta(name='twitter:title', content=twitterTitle)
+    meta(name='twitter:description', content=twitterDescription)
+    meta(name='twitter:image', content='http://madebyllama.com/img/social/twitter.jpg')
+
+    link(href='/img/favicon/apple-touch-icon-144-precompiled.png', rel='apple-touch-icon-precomposed', sizes='144x144')
+    link(href='/img/favicon/apple-touch-icon-114-precompiled.png', rel='apple-touch-icon-precomposed', sizes='114x114')
+    link(href='/img/favicon/apple-touch-icon-72-precompiled.png', rel='apple-touch-icon-precomposed', sizes='72x72')
+    link(href='/img/favicon/apple-touch-icon-57-precompiled.png', rel='apple-touch-icon-precomposed')
+    link(href='/img/favicon/favicon.png', rel='shortcut icon', type='image/vnd.microsoft.icon')
+
+    link(rel="stylesheet", type="text/css" href="css/main.css")
+
+    script(type="text/javascript", src="js/modernizr.js")
+  body
+    #container
+      .container-item.container-item--fixed
+        h1.logo.ir Made by Llama
+
+        a.cta(href='http://etsy.com/shop/madebyllama', target='_blank') Visit our Etsy store
+
+        hr
+
+        a.social.facebook.ir(href='http://facebook.com/madebyllama', target='_blank') Made by llama on Facebook
+        a.social.twitter.ir(href='http://twitter.com/madebyllama', target='_blank') Made by llama on Twitter
+        a.social.instagram.ir(href='http://instagram.com/madebyllama', target='_blank') Made by llama on Instagram
+        //a.pinterest(href='http://pinterest.com/pins/madebyllama', target='_blank') Made by llama on Pinterest
+
+        p.copyright
+          = 'Copyright '
+          &copy;
+          = '2016 '
+          a(href='http://madebyllama.com/') Made by Llama
+          = '. All right reserved.'
+
+    script(type="text/javascript", src="js/app.js")

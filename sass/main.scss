@@ -1,0 +1,163 @@
+@import 'mixins';
+@import 'fonts';
+@import 'variables';
+
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: $primary;
+  color: $secondary;
+
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+  h1, h2 {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  h1 {
+    color: $primary;
+  }
+
+  #container {
+    display: flex;
+    align-items: center;
+    min-height: 24em;
+    justify-content: center;
+
+    .container-item {
+      flex: 1;
+
+      &.container-item--fixed {
+        flex: none;
+        max-width: 50%;
+
+        text-align: center;
+
+        padding: $container-v-padding 0;
+
+        h1.logo {
+          @include background-image('logo_large');
+          background-size: 220px 385px;
+          background-repeat: no-repeat;
+
+          width: 220px;
+          height: 385px;
+
+          margin: 0;
+          padding: 0;
+
+          margin: 0 auto;
+        }
+
+        a.cta {
+          padding: $cta-padding*1.5 $cta-padding*2;
+
+          color: $primary;
+          background-color: $secondary;
+
+          border-spacing: $cta-border-spacing;
+
+          position: relative;
+
+          text-decoration: none;
+
+          display: inline-block;
+
+          clear: both;
+
+          margin: $element-v-padding 0;
+
+          text-transform: uppercase;
+
+          @include font-size(18px);
+
+          @include transition(all .2s);
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: $secondary 2px solid;
+
+            @include transition(all .2s);
+          }
+
+          &:hover {
+            &:after {
+              top: -5px;
+              left: -5px;
+              right: -5px;
+              bottom: -5px;
+            }
+          }
+        }
+
+        hr {
+          border: 1px solid $secondary;
+          margin: 0;
+          padding: 0;
+        }
+
+        a.social {
+          width: 50px;
+          height: 50px;
+
+          background-size: 100%;
+          background-repeat: no-repeat;
+
+          display: inline-block;
+
+          margin-right: $cta-padding;
+
+          margin: $element-v-padding $element-h-padding 0;
+
+          @include transition(all .2s);
+
+          &.facebook {
+            @include background-image('social/fb')
+          }
+          &.twitter {
+            @include background-image('social/tw')
+          }
+          &.instagram {
+            @include background-image('social/ins')
+          }
+          &.pinterest {
+            @include background-image('social/pin')
+          }
+
+          &:hover {
+            width: 55px;
+            height: 55px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        p.copyright {
+          margin-top: $element-v-padding;
+
+          opacity: 0.6;
+
+          @include font-size(11px);
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
