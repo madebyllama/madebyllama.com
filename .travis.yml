@@ -1,8 +1,15 @@
 language: node_js
 node_js:
   - "4.1"
+before_install:
+  - gem install sass
+before_deploy:
+  - npm install -g grunt-cli
+  - npm install
 deploy:
+  skip_cleanup: true
   provider: script
-  script: scripts/deploy.sh
+  script:
+    - grunt release
   on:
-  	branch: master
+    branch: master
