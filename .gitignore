@@ -1,7 +1,7 @@
 .idea
 .sass-cache
 bin/css
-bin/js
+bin/js/app.js
 bin/index.html
 node_modules
 .ftppass

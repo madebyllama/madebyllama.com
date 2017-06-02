@@ -35,33 +35,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    modernizr: {
-      dist: {
-        // Path to save out the built file
-        "dest" : "./bin/js/modernizr.js",
-        // More settings go here
-        "parseFiles": true,
-        "tests": [
-          "svg"
-        ],
-        "options": [
-          "setClasses"
-        ],
-        //"uglify": true,
-        "uglify": true,
-        "crawl": true,
-
-        // Set to true to pass in buffers via the "files" parameter below
-        "useBuffers" : true,
-
-        // By default, this task will crawl all *.js, *.css, *.scss files.
-        "files" : {
-          "src": [
-            "**/**/*.{js,css,scss}"
-          ]
-        }
-      }
-    },
     watch: {
       grunt: {
         options: {
@@ -124,7 +97,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sftp-deploy');
 
   // Default task(s).
-  grunt.registerTask('build',   ['coffee', 'jshint', 'jade', 'sass', 'modernizr:dist']);
+  grunt.registerTask('build',   ['coffee', 'jshint', 'jade', 'sass']);
   grunt.registerTask('default', ['build','watch']);
   grunt.registerTask('release', ['build', 'sftp-deploy']);
 
